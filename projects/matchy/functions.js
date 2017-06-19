@@ -15,19 +15,17 @@
 function search(animals, name) {
     for(var i = 0; i < animals.length; i++) {
         if(name === animals[i].name) {
-            return animals[i];
-        } else {
-            return null;
+            return (animals[i]);
         }
-    }
+    } return null;
 }
 //////////////////////////////////////////////////////////////////////
 // Step 2 - Replace //////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 function replace(animals, name, replacement) {
      for(var i = 0; i < animals.length; i++) {
-         if(animals[i].name === name) {
-             animals.splice(animals[i], 1, replacement);
+         if(name === animals[i].name) {
+             animals.splice(i, 1, replacement);
          }
      }
 }
@@ -36,21 +34,26 @@ function replace(animals, name, replacement) {
 //////////////////////////////////////////////////////////////////////
 function remove(animals, name) {
      for(var i = 0; i < animals.length; i++) {
-        if(animals[i] === name) {
-            animals.splice(animals[i], 1);
-        }
+        if(name === animals[i].name) {
+            animals.splice(i, 1);
+        } 
 }
 }
 //////////////////////////////////////////////////////////////////////
 // Step 4 - Create ///////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 function add(animals, animal) {
-    for(var i = 0; i < animals.length; i++) {
-        if(Object.hasOwnProperty(animal.name.length > 0) && Object.hasOwnProperty(animal.species.length > 0) && animal.name !== animals[i].name) {
-            animals.push(animal);
+    if(animal.name.length> 0 && animal.species.length > 0){
+        for(var i = 0; i < animals.length; i++) {
+            if(animal.name === animals[i].name) {
+                return;
+            }
         }
-};
+        
+         animals.push(animal);
+    }
 }
+
 /** 
  * You did it! You're all done with Matchy!
  */

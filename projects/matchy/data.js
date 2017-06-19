@@ -53,7 +53,7 @@ animal.noises = noises;
 // Step 6 - A Collection of Animals //////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 var animals = [];
-// animals.push(animal);
+animals.push(animal);
 // console.log(animals);
 var duck = {
     species: 'duck',
@@ -81,15 +81,17 @@ animals.push(hedgehog);
 //////////////////////////////////////////////////////////////////////
 //this is a list, so we'll use an array
 var friends = [];
-function rando(arr){
-    min = Math.ceil(0);
-    max = Math.floor(arr.length);
+function getRandom(arr){
+    var min = Math.ceil(0);
+    var max = Math.floor(arr.length);
     return arr[Math.floor(Math.random() * (max-min)) + min];
 }
-console.log(rando(animals));
-friends.push((rando(animals).name));
+console.log(getRandom(animals));
+friends.push((getRandom(animals).name));
 console.log(friends);
 hedgehog.friends = friends;
+
+
 /** 
  * Nice work! You're done Part 1. Pat yourself on the back and 
  * move onto Part 2 in the file called "functions.js"
