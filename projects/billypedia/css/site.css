@@ -1,5 +1,5 @@
 body {
-    background: rgb(125, 198, 205);
+    background: rgb(208, 32, 144);
     color: rgb(45, 45, 45);
     padding: 10px;
     font-family: arial;
@@ -19,7 +19,7 @@ header {
 /* navigation menu */
 
 nav {
-    background: rgb(239, 80, 41);
+    background: rgb(25, 25, 112);
     margin: 0 auto;
     display: flex;
     padding: 10px;
@@ -52,7 +52,7 @@ nav a {
 /* main container area beneath menu */
 
 main {
-    background: rgb(245, 238, 219);
+    background: rgb(216, 191, 216);
     display: flex;
 }
 
@@ -78,6 +78,6 @@ main {
 
 #image-billy {
     border: 2px solid;
-    border-color: rgba(255, 255, 255, 1);
+    border-color: rgb(255, 255, 255, 1);
     cursor: pointer; cursor: hand;
 }
