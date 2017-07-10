@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/custom.css" type="text/css" />
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="bower_components/notes/notes.js"></script>
+    <title>A Well of HTML</title>
+    <style type="text/css">
+        form {
+          /* Just to center the form on the page */
+          margin: 0 auto;
+          width: 400px;
+          /* To see the outline of the form */
+          padding: 1em;
+          border: 1px solid #CCC;
+          border-radius: 1em;
+        }
+        
+        form div + div {
+          margin-top: 1em;
+        }
+        
+        label {
+          /* To make sure that all labels have the same size and are properly aligned */
+          display: inline-block;
+          width: 90px;
+          text-align: right;
+        }
+        
+        input, textarea {
+          /* To make sure that all text fields have the same font settings
+             By default, textareas have a monospace font */
+          font: 1em sans-serif;
+        
+          /* To give the same size to all text fields */
+          width: 300px;
+          box-sizing: border-box;
+        
+          /* To harmonize the look & feel of text field border */
+          border: 1px solid #999;
+        }
+        
+        input:focus, textarea:focus {
+          /* To give a little highlight on active elements */
+          border-color: #000;
+        }
+        
+        textarea {
+          /* To properly align multiline text fields with their labels */
+          vertical-align: top;
+        
+          /* To give enough room to type some text */
+          height: 5em;
+        }
+        
+        .button {
+          /* To position the buttons to the same position of the text fields */
+          padding-left: 90px; /* same size as the label elements */
+        }
+        
+        button {
+          /* This extra margin represent roughly the same space as the space
+             between the labels and their text fields */
+          margin-left: .5em;
+        }
+        table {
+            margin: 20px;
+        }
+        
+        table,
+        th,
+        td {
+            padding: 4px;
+            border: 1px solid black;
+        }        
+        .flex-row {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin: 20px;
+            padding: 4px;
+        }
+        
+        .example-grid {
+            margin: 20px;
+        }
+        
+        .row-img {
+            margin: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container" class="container">
+        <!-- ALL YOUR MARKUP GOES BELOW HERE -->
+        <div>
+        <a href="https://en.wikipedia.org/wiki/Dubstep"> A Very Dubstep Wiki</a>
+        </div>
+        <div>
+        <img src="img/black-currant.jpg" />
+        </div> 
+        <div>
+        <h1>It's a heading</h1>
+        <p>Dubstep is a genre of electronic dance music that originated in South London, England. <b>It emerged in the late 1990s as a development within a lineage of related styles such as 2-step garage, dub, techno, drum and bass, broken beat, jungle, and reggae</b>. In the United Kingdom the origins of the genre can be traced back to the growth of the Jamaican sound system party scene in the early 1980s. The music generally features sparse, syncopated drum and percussion patterns with bass lines that contain prominent sub-bass frequencies.
+        </p>
+        <h2>Samesies</h2>
+        <p>Dubstep is a genre of electronic dance music that originated in South London, England. It emerged in the late 1990s as a development within a lineage of related styles such as 2-step garage, dub, techno, drum and bass, broken beat, jungle, and reggae. <i>In the United Kingdom the origins of the genre can be traced back to the growth of the Jamaican sound system party scene in the early 1980s.</i> The music generally features sparse, syncopated drum and percussion patterns with bass lines that contain prominent sub-bass frequencies.</p>
+        <h3>This one, too</h3>
+        <p>Dubstep is a genre of electronic dance music that originated in South London, England. It emerged in the late 1990s as a development within a lineage of related styles such as 2-step garage, dub, techno, drum and bass, broken beat, jungle, and reggae. In the United Kingdom the origins of the genre can be traced back to the growth of the Jamaican sound system party scene in the early 1980s. 
+        <em>The music generally features sparse, syncopated drum and percussion patterns with bass lines that contain prominent sub bass frequencies.</em></p>
+        <h4>one time <small>one time</small></h4>
+            <ul>
+                <li>strumming my pain with his fingers</li>
+                <li>singing my life with his words</li>
+            </ul>
+        <h5>Killing me Softly</h5>
+            <ol>
+                <li>with his song</li>
+                <li>killing me softly</li>
+                <li>with his sooo ooon oononong</li>
+            </ol>
+        <h6>La la la la ahah</h6>
+        <dl>
+            <dt>whoa oh oh</dt>
+                <dd>la ah ahh</dd>
+            <dt>whoa oh oh</dt>
+                <dd>la ah ah ahhh ah ah ah ah</dd>
+        </dl>
+        </div>
+        <div>
+        <form class="example-form">
+            <div>
+                <label for="name">From:</label>
+                <input type="text" id="name" />
+            </div>
+            <div>
+                <label for="mail">Your E-mail:</label>
+                <input type="email" id="mail" />
+            </div>
+            <div>
+                <label for="msg">Message:</label>
+                <textarea id="msg"></textarea>
+            </div>
+
+            <div class="button">
+                <button type="submit">Send it off!</button>
+            </div>
+        </form>
+        </div>
+        <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Fame</th>
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <td colspan="2">Best Rappers Alive (Jokes Only)</td>
+                </tr>
+            </tfoot>
+            <tbody>
+                <tr>
+                    <td>Dylan</td>
+                    <td>Making da Band</td>
+                </tr>
+                <tr>
+                    <td>Childish Gambino</td>
+                    <td>Community</td>
+                </tr>
+                <tr>
+                    <td>Big Sean</td>
+                    <td>over talking</td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+        <div class="flex-row">
+            <div>F</div>
+            <div>L</div>
+            <div>E</div>
+            <div>X</div>
+            <div>Y</div>
+        </div>
+        
+        <div class="example-grid">
+            <div class="row">
+                <div class="col-md-2"><img src="img/cherries.jpg" class="row-img"></img>
+                </div>
+                <div class="col-md-10">Cherries are tasty things that grow on trees! You can eat them and feel good about yourself!</div>
+            </div>
+            <div class="row">
+                <div class="col-md-2"><img src="img/black-currant.jpg" class="row-img"></img>
+                </div>
+                <div class="col-md-10">Black Currants are tasty things that grow on bushes! You can eat them and feel good about yourself!</div>
+            </div>
+            <div class="row">
+                <div class="col-md-2"><img src="img/apple-in-grass.jpg" class="row-img"></img>
+                </div>
+                <div class="col-md-10">Apples are tasty things that grow on trees! You can eat them and feel good about yourself! They make great pies!
+                </div>
+            </div>
+        </div>
+        <!-- ALL YOUR MARKUP GOES ABOVE HERE -->
+    </div>
+    <script>
+        $(function () {
+            window.opspark.notes.show();
+        });
+    </script>
+</body>
+
+</html>

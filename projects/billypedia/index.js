@@ -5,9 +5,11 @@ $(document).ready(function() {
         
         // uncomment this to inspect all available data; delete when done //
         //console.log(data);
-        $('#section-bio').css('background-color', 'grey').css('border-radius', '4px');
+        $('nav').css('border-radius', '10px');
+        $('main').css('border-radius', '10px');
+        $('#section-bio').css('background-color', 'grey').css('border-radius', '10px');
         $('#section-quotes').prependTo('#sections');
-        $('.heading-quotes').css('color', 'black').css('padding-left', '10px');
+        $('.heading-quotes').css('color', 'black');
         
         /*
         // EXAMPLE: Looping over top rated recordings; replace with your code //
@@ -18,7 +20,7 @@ $(document).ready(function() {
         */
         let topRated = data.discography.topRated;
         _.forEach(topRated, function(recording){
-            $('#list-top-rated').append($('<li>').text(recording.title).click(function(){
+            $('#list-top-rated').append($('<li>').css('list-style', 'none').text(recording.title).click(function(){
                 $('#top-rated-image').attr('src', recording["art"]);
             }));
         });
@@ -28,7 +30,7 @@ $(document).ready(function() {
         
         var recordings = data.discography.recordings;
         _.map(recordings, function(recording){
-            var $listItem = $('<li>').addClass('recording').click(function(){
+            var $listItem = $('<li>').css('list-style', 'none').css('border-style', 'solid').css('border-width', 'thin').css('border-radius', '10px').addClass('recording').click(function(){
                 $('#recordings-image').attr('src', recording["art"])});
             var $title = $('<div>').text(recording.title).addClass('title');
             var $artist = $('<div>').text(recording.artist).addClass('artist'); 
@@ -79,6 +81,9 @@ $(document).ready(function() {
         };
         let rider = data.rider;
         createTable(rider).appendTo('.content');
+        
+        
+        
        
        
        
